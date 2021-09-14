@@ -1,4 +1,4 @@
-package com.jesusrojo.composedemo.ui.theme
+package com.jesusrojo.composedemo.basic.theme
 
 import androidx.compose.material.Typography
 import androidx.compose.ui.text.TextStyle

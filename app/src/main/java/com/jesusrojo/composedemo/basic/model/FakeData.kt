@@ -1,6 +1,4 @@
-package com.jesusrojo.composedemo.util
-
-import com.jesusrojo.composedemo.model.UiData
+package com.jesusrojo.composedemo.basic.model
 
 class FakeData {
 

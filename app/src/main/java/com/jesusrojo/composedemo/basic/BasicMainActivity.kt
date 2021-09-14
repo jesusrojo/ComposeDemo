@@ -1,4 +1,4 @@
-package com.jesusrojo.composedemo
+package com.jesusrojo.composedemo.basic
 
 import android.os.Bundle
 import androidx.activity.compose.setContent
@@ -25,9 +25,9 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.jesusrojo.composedemo.ui.theme.ComposeDemoTheme
+import com.jesusrojo.composedemo.basic.theme.ComposeDemoTheme
 
-class MainActivity : AppCompatActivity() {
+class BasicMainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
