@@ -11,6 +11,7 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material.Button
 import androidx.compose.material.Icon
+import androidx.compose.material.LocalContentColor
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
@@ -72,7 +73,10 @@ fun TodoScreenStart(
  * @param modifier modifier for this element
  */
 @Composable
-fun TodoRow(todo: TodoItem, onItemClicked: (TodoItem) -> Unit, modifier: Modifier = Modifier) {
+fun TodoRow(todo: TodoItem,
+            onItemClicked: (TodoItem) -> Unit,
+            modifier: Modifier = Modifier,
+            iconAlpha: Float = remember(todo.id) { randomTint() }/*step5-3/3*/) {
     Row(
         modifier = modifier
             .clickable { onItemClicked(todo) }
@@ -80,8 +84,11 @@ fun TodoRow(todo: TodoItem, onItemClicked: (TodoItem) -> Unit, modifier: Modifie
         horizontalArrangement = Arrangement.SpaceBetween
     ) {
         Text(todo.task)
+        //val iconAlpha = randomTint() //step5-1/3
+        //val iconAlpha: Float = remember(todo.id) { randomTint() } //step5-2/3
         Icon(
             imageVector = todo.icon.imageVector,
+            tint = LocalContentColor.current.copy(alpha = iconAlpha),//step5
             contentDescription = stringResource(id = todo.icon.contentDescription)
         )
     }
