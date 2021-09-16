@@ -13,6 +13,7 @@ import android.widget.ListView;
 
 import org.jetbrains.annotations.NotNull;
 
+@SuppressWarnings({"deprecation", "rawtypes"})
 public abstract class BaseListActivity extends ListActivity {
 
     private Activity mActivity;
@@ -33,13 +34,10 @@ public abstract class BaseListActivity extends ListActivity {
         }
 
         ListView listView = getListView();
-        listView.setOnItemClickListener(new OnItemClickListener() {
-            @Override public void onItemClick(AdapterView<?> parent, View view,
-                                              int position, long id) {
+        listView.setOnItemClickListener((parent, view, position, id) -> {
 
-                if(mSparseArray!=null) {
-                    startActivity(new Intent(mActivity, mSparseArray.get(position)));
-                }
+            if(mSparseArray!=null) {
+                startActivity(new Intent(mActivity, mSparseArray.get(position)));
             }
         });
     }

@@ -42,5 +42,4 @@ class TodoActivityStart : AppCompatActivity() {
             onRemoveItem = todoViewModel::removeItem // SAME AS BEFORE, method reference syntax
         )
     }
-
 }
