@@ -30,8 +30,10 @@ import kotlin.random.Random
  * @param onAddItem (event) request an item be added
  * @param onRemoveItem (event) request an item be removed
  */
+
+//https://developer.android.com/codelabs/jetpack-compose-state#3
 @Composable
-fun TodoScreen(
+fun TodoScreenStart(
     items: List<TodoItem>,
     onAddItem: (TodoItem) -> Unit,
     onRemoveItem: (TodoItem) -> Unit
@@ -98,7 +100,7 @@ fun PreviewTodoScreen() {
         TodoItem("Apply state", TodoIcon.Done),
         TodoItem("Build dynamic UIs", TodoIcon.Square)
     )
-    TodoScreen(items, {}, {})
+    TodoScreenStart(items, {}, {})
 }
 
 @Preview

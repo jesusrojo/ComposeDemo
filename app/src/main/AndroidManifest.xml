@@ -8,13 +8,11 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.ComposeDemo">
+        android:theme="@style/Theme.ComposeDemo.NoActionBar">
 
         <activity
-            android:name="com.jesusrojo.composedemo.uidata.presentation.ui.UiDataActivity"
-            android:exported="true"
-            android:label="@string/app_name"
-            android:theme="@style/Theme.ComposeDemo.NoActionBar">
+            android:name=".listmenuactivity.MainListActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -22,19 +20,13 @@
             </intent-filter>
         </activity>
 
-        <activity
-            android:name=".state.todo.TodoActivity"
-            android:exported="true"
-            android:label="@string/app_name"
-            android:theme="@style/Theme.ComposeDemo.NoActionBar">
-<!--            <intent-filter>-->
-<!--                <action android:name="android.intent.action.MAIN" />-->
-
-<!--                <category android:name="android.intent.category.LAUNCHER" />-->
-<!--            </intent-filter>-->
-        </activity>
+        <activity android:name=".state.examples.HelloCodelabActivity"/>
+        <activity android:name=".state.examples.HelloCodeLabActivityWithViewModel"/>
+        <activity android:name=".state.examples.HelloActivityCompose"/>
         <activity android:name=".basic.BasicMainActivity"/>
-
+        <activity android:name=".state.examples.start.TodoActivityStart"/>
+        <activity android:name=".state.todo.TodoActivity"/>
+        <activity android:name=".uidata.presentation.ui.UiDataActivity"/>
     </application>
 
 </manifest>

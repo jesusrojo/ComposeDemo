@@ -5,7 +5,10 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.jesusrojo.composedemo.state.todo.TodoItem
 
-class TodoViewModel : ViewModel() {
+
+
+//We want to use this ViewModel to hoist the state from TodoScreen
+class TodoViewModelStart : ViewModel() {
 
     private var _todoItems = MutableLiveData(listOf<TodoItem>())
     val todoItems: LiveData<List<TodoItem>> = _todoItems
