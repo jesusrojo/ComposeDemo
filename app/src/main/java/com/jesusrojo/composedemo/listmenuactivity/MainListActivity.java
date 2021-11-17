@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.util.SparseArray;
 
 import com.jesusrojo.composedemo.basic.BasicMainActivity;
+import com.jesusrojo.composedemo.recyclersimple.RecyclerSimpleActivity;
 import com.jesusrojo.composedemo.state.examples.HelloActivityCompose;
 import com.jesusrojo.composedemo.state.examples.HelloCodeLabActivityWithViewModel;
 import com.jesusrojo.composedemo.state.examples.HelloCodelabActivity;
@@ -33,6 +34,7 @@ public class MainListActivity extends BaseListActivity {
         result.put(4, TodoActivityStart.class);
         result.put(5, TodoActivity.class);
         result.put(6, UiDataActivity.class);
+        result.put(7, RecyclerSimpleActivity.class);
 
         return result;
     }
