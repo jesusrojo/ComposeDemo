@@ -12,6 +12,7 @@ import com.jesusrojo.composedemo.state.examples.HelloCodeLabActivityWithViewMode
 import com.jesusrojo.composedemo.state.examples.HelloCodelabActivity;
 import com.jesusrojo.composedemo.state.examples.start.TodoActivityStart;
 import com.jesusrojo.composedemo.state.todo.TodoActivity;
+import com.jesusrojo.composedemo.topappbar.TopAppBarActivity;
 import com.jesusrojo.composedemo.uidata.presentation.ui.UiDataActivity;
 
 
@@ -35,7 +36,7 @@ public class MainListActivity extends BaseListActivity {
         result.put(5, TodoActivity.class);
         result.put(6, UiDataActivity.class);
         result.put(7, RecyclerSimpleActivity.class);
-
+        result.put(8, TopAppBarActivity.class);
         return result;
     }
 }

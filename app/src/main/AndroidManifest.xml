@@ -28,6 +28,7 @@
         <activity android:name=".state.todo.TodoActivity"/>
         <activity android:name=".uidata.presentation.ui.UiDataActivity"/>
         <activity android:name=".recyclersimple.RecyclerSimpleActivity"/>
+        <activity android:name=".topappbar.TopAppBarActivity"/>
     </application>
 
 </manifest>
